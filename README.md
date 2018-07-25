@@ -7,7 +7,7 @@ If you want to quickly deploy a local cluster without any configuration and vagr
 # Supported tags and respective Dockerfile links
 
 * [`latest` (latest/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/Dockerfile): Default to track latest master branch.
-* [`1.1.2` (v1.1.2/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/v1.1.2/Dockerfile): 1.1.2 release.
+* [`1.2.0` (v1.2.0/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/v1.2.0/Dockerfile): 1.2.0 release.
 
 For more information about this image and its history, please see the relevant manifest file in the [`yeasy/docker-hyperledger-fabric-sdk-node` GitHub repo](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node).
 

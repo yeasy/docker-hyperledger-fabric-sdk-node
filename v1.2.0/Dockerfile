@@ -12,6 +12,8 @@ LABEL maintainer "Baohua Yang <yangbaohua@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
+ENV PROJECT_VERSION=1.2.0
+
 RUN apt-get update \
         && apt-get install -y tree unzip vim \
         && rm -rf /var/cache/apt
@@ -19,9 +21,11 @@ RUN apt-get update \
 RUN npm install -g gulp
 
 RUN cd /tmp \
-        && git clone --single-branch -b master --depth 1 http://gerrit.hyperledger.org/r/fabric-sdk-node \
+        && wget https://github.com/hyperledger/fabric-sdk-node/archive/v${PROJECT_VERSION}.zip \
+        && unzip fabric-sdk-node-${PROJECT_VERSION}.zip \
+        && rm fabric-sdk-node-${PROJECT_VERSION}.zip \
+        && mv fabric-sdk-node-${PROJECT_VERSION} fabric-sdk-node \
         && cd fabric-sdk-node \
         && npm install
-
 
 WORKDIR /tmp/fabric-sdk-node
