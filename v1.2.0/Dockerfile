@@ -22,9 +22,9 @@ RUN npm install -g gulp
 
 RUN cd /tmp \
         && wget https://github.com/hyperledger/fabric-sdk-node/archive/v${PROJECT_VERSION}.zip \
-        && unzip fabric-sdk-node-${PROJECT_VERSION}.zip \
-        && rm fabric-sdk-node-${PROJECT_VERSION}.zip \
-        && mv fabric-sdk-node-${PROJECT_VERSION} fabric-sdk-node \
+        && unzip v${PROJECT_VERSION}.zip \
+        && rm v${PROJECT_VERSION}.zip \
+        && mv v${PROJECT_VERSION} fabric-sdk-node \
         && cd fabric-sdk-node \
         && npm install
 
