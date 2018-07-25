@@ -24,7 +24,7 @@ RUN cd /tmp \
         && wget https://github.com/hyperledger/fabric-sdk-node/archive/v${PROJECT_VERSION}.zip \
         && unzip v${PROJECT_VERSION}.zip \
         && rm v${PROJECT_VERSION}.zip \
-        && mv v${PROJECT_VERSION} fabric-sdk-node \
+        && mv fabric-sdk-node-${PROJECT_VERSION} fabric-sdk-node \
         && cd fabric-sdk-node \
         && npm install
 
