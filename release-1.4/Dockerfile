@@ -13,7 +13,7 @@ RUN apk update \
         && apk add bash git g++ make python vim
 
 RUN cd /opt \
-        && git clone --single-branch -b main --depth 1 https://github.com/hyperledger/fabric-sdk-node.git \
+        && git clone --single-branch -b release-1.4 --depth 1 https://github.com/hyperledger/fabric-sdk-node.git \
         && cd fabric-sdk-node \
         && npm install
 

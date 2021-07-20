@@ -1,12 +1,14 @@
 Hyperledger Fabric SDK in Node.Js
 ===
-Docker images for [Hyperledger](https://www.hyperledger.org) Fabric sdk node image.
+Docker images for [Hyperledger Fabric SDK Node](https://github.com/hyperledger/fabric-sdk-node) image.
 
 If you want to quickly deploy a local cluster without any configuration and vagrant, please refer to [Start hyperledger cluster using compose](https://github.com/yeasy/docker-compose-files#hyperledger_fabric).
 
 # Supported tags and respective Dockerfile links
 
 * [`latest` (latest/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/Dockerfile): Default to track latest master branch.
+* [`release-2.2` (release-2.2/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/release-2.2/Dockerfile): 2.2.x release.
+* [`release-1.4` (release-1.4/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/release-1.4/Dockerfile): 1.4.x release.
 * [`1.2.0` (v1.2.0/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/v1.2.0/Dockerfile): 1.2.0 release.
 
 For more information about this image and its history, please see the relevant manifest file in the [`yeasy/docker-hyperledger-fabric-sdk-node` GitHub repo](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node).
@@ -15,7 +17,7 @@ For more information about this image and its history, please see the relevant m
 Docker image with hyperledger fabric node sdk, which will be utilized as the client to interact with the network.
 
 # How to use this image?
-The docker image is auto built at [https://registry.hub.docker.com/u/yeasy/hyperledger-fabric-sdk-node/](https://registry.hub.docker.com/u/yeasy/hyperledger-fabric-sdk-node/).
+The docker image is auto built at [docker hub](https://hub.docker.com/repository/docker/yeasy/hyperledger-fabric-sdk-node).
 
 ## In Dockerfile
 ```sh
@@ -23,14 +25,14 @@ FROM yeasy/hyperledger-fabric-sdk-node:latest
 ```
 
 # Which image is based on?
-The image is built based on [node](https://hub.docker.com/_/node) 9.0 image.
+The image is built based on [node](https://hub.docker.com/_/node) 12 image.
 
 # What has been changed?
 ## clone fabric sdk node code
 Clone the fabric sdk node code from repo.
 
 ## install dependencies
-Install required gulp, and sdk dependencies.
+Install required `git`, `g++`, `make`, `python`, and sdk dependencies.
 
 # Supported Docker versions
 
