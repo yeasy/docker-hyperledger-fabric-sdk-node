@@ -6,15 +6,17 @@ If you want to quickly deploy a local cluster without any configuration and vagr
 
 # Supported tags and respective Dockerfile links
 
-* [`latest` (latest/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/Dockerfile): Default to track latest master branch.
-* [`release-2.2` (release-2.2/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/release-2.2/Dockerfile): 2.2.x release.
-* [`release-1.4` (release-1.4/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/release-1.4/Dockerfile): 1.4.x release.
+* [`latest` (Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/Dockerfile): legacy SDK tag `v2.2.20`.
+* [`release-2.2` (release-2.2/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/release-2.2/Dockerfile): legacy SDK tag `v2.2.20`.
+* [`release-1.4` (release-1.4/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/release-1.4/Dockerfile): legacy SDK tag `v1.4.20`.
 * [`1.2.0` (v1.2.0/Dockerfile)](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node/blob/master/v1.2.0/Dockerfile): 1.2.0 release.
 
 For more information about this image and its history, please see the relevant manifest file in the [`yeasy/docker-hyperledger-fabric-sdk-node` GitHub repo](https://github.com/yeasy/docker-hyperledger-fabric-sdk-node).
 
 # What is hyperledger-fabric-sdk-node?
 Docker image with hyperledger fabric node sdk, which will be utilized as the client to interact with the network.
+
+`hyperledger/fabric-sdk-node` is archived upstream. For new Fabric applications, prefer the Fabric Gateway client API.
 
 # How to use this image?
 The docker image is auto built at [docker hub](https://hub.docker.com/repository/docker/yeasy/hyperledger-fabric-sdk-node).
@@ -25,7 +27,7 @@ FROM yeasy/hyperledger-fabric-sdk-node:latest
 ```
 
 # Which image is based on?
-The image is built based on [node](https://hub.docker.com/_/node) 12 image.
+The image is built based on [node](https://hub.docker.com/_/node) 20 Alpine image.
 
 # What has been changed?
 ## clone fabric sdk node code

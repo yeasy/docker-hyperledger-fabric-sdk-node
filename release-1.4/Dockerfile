@@ -6,14 +6,14 @@
 # * yeasy/hyperledger-fabric-orderer
 # * yeasy/hyperledger-fabric-ca
 
-FROM node:12-alpine
+FROM node:20-alpine
 LABEL maintainer="yeasy@github"
 
-RUN apk update \
-        && apk add bash git g++ make python vim
+RUN apk add --no-cache bash git g++ make python3 vim
 
+ARG FABRIC_SDK_NODE_REF=v1.4.20
 RUN cd /opt \
-        && git clone --single-branch -b release-1.4 --depth 1 https://github.com/hyperledger/fabric-sdk-node.git \
+        && git clone --single-branch -b "${FABRIC_SDK_NODE_REF}" --depth 1 https://github.com/hyperledger/fabric-sdk-node.git \
         && cd fabric-sdk-node \
         && npm install
 
